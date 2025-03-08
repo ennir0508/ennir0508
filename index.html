@@ -4,13 +4,149 @@
     <title>Profile</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Google Font - Roboto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&family=Zen+Kurenaido&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Google Material Icon -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+    <!-- Custom CSS -->
     <link href="css/style.css" rel="stylesheet" />
+    <script type="text/javascript" src="js/main.js"></script>
   </head>
   <body>
-    <header>This is Header.</header>
-    <main>This is main content.</main>
-    <footer>This is Footer.</footer>
+    <div class="wrapper">
+      <header>
+        <nav class="navbar">
+          <a href="#">
+            <span class="logo">My Portfolio</span>
+          </a>
+          <ul class="navbar__menu">
+            <li>
+              <a href="#" class="navbar__link">About</a>
+            </li>
+            <li>
+              <a href="#" class="navbar__link">Skills</a>
+            </li>
+            <li>
+              <a href="#" class="navbar__link">Develop</a>
+            </li>
+          </ul>
+          <label for="theme-toggle" class="theme-toggle__label light">
+            <span class="material-symbols-outlined"> light_mode </span>
+            <input type="checkbox" id="theme-toggle" value="true" />
+            <div class="theme-toggle__switch"></div>
+            <span class="material-symbols-outlined"> dark_mode </span>
+          </label>
+        </nav>
+      </header>
 
-    <script src="index.js"></script>
+      <main>
+        <div class="container">
+          <section id="profile">
+            <div class="section__box left"></div>
+            <div class="section__box right">
+              <span class="material-symbols-outlined"> account_circle </span
+              >プロフィール
+              <ul class="section__list">
+                <li class="">
+                  名前/ハンドルネーム（本名を載せたくない場合はニックネームでOK）
+                </li>
+                <li class="">
+                  職種・スキルレベル（例：「フルスタックエンジニア」「フロントエンドエンジニア」など）
+                </li>
+                <li class="">
+                  技術スタック（得意な言語・フレームワーク・ツール）
+                </li>
+                <li class="">
+                  経歴・実績（経験年数、開発実績、過去の職歴など） 連絡先 or
+                  SNS（GitHub、Twitter、LinkedIn など）
+                </li>
+              </ul>
+            </div>
+          </section>
+
+          <section id="skill">
+            <div class="section__box left"></div>
+            <div class="section__box right">
+              <span class="material-symbols-outlined"> code </span>スキル
+              <ul class="section__list">
+                <li class="">
+                  プログラミング言語: JavaScript, TypeScript, Python, etc.
+                </li>
+                <li class="">
+                  フレームワーク / ライブラリ: React, Vue.js, Next.js, etc.
+                </li>
+                <li class="">
+                  バックエンド: Node.js, Express, NestJS, Laravel, etc.
+                </li>
+                <li class="">データベース: MySQL, PostgreSQL, MongoDB, etc.</li>
+                <li class="">
+                  ツール / 環境: Docker, AWS, Firebase, CI/CD, etc.
+                </li>
+              </ul>
+            </div>
+          </section>
+
+          <section id="product">
+            <div class="section__box left"></div>
+            <div class="section__box right">
+              <span class="material-symbols-outlined"> widgets </span
+              >プロジェクト
+              <ul class="section__list">
+                <li class="">名称</li>
+                <li class="">概要</li>
+                <li class="">役割</li>
+                <li class="">技術スタック</li>
+                <li class="">特徴</li>
+                <li class="">
+                  GitHubリンク/デモURL: （ある場合はリンクを記載）
+                </li>
+              </ul>
+            </div>
+          </section>
+
+          <section id="code">
+            <div class="section__box left"></div>
+            <div class="section__box right">
+              <span class="material-symbols-outlined"> code </span>
+              コード
+              <ul class="section__list">
+                <li class="">
+                  GitHubやGistに置いたコードのリンクを載せると、技術力の証明になります。
+                </li>
+              </ul>
+            </div>
+          </section>
+
+          <section id="other">
+            <div class="section__box left"></div>
+            <div class="section__box right">
+              <span class="material-symbols-outlined"> edit_note </span>その他
+              <ul class="section__list">
+                <li class="">
+                  ブログ・技術記事（あれば） 自分の技術ブログ（Qiita, Zenn,
+                  Hatena,Medium など）
+                </li>
+              </ul>
+            </div>
+          </section>
+        </div>
+      </main>
+      <footer>
+        <span class="copyright">&copy; 2025 Github Profile</span>
+      </footer>
+    </div>
   </body>
 </html>

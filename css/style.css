@@ -1,0 +1,232 @@
+:root {
+  --font-color__main: #1a1b26;
+  --font-color__primary: #1a1b26;
+  --font-color__secondary: #1a1b26;
+  --font-color__header: #1a1b26;
+  --font-color__clear: #292e42;
+  --font-color__toggle: #1a1b26;
+
+  --bg-color__main: #ffffff;
+  --bg-color__primary: #000000;
+  --bg-color__secondary: #000000;
+  --bg-color__header: #f8f8f8;
+
+  --border-color__main: #000000;
+  --border-color__primary: #000000;
+  --border-color__secondary: #000000;
+  --border-color__header: #000000;
+
+  --header-height: 40px;
+}
+
+.theme__dark {
+  --font-color__main: #8389a8;
+  --font-color__primary: #000000;
+  --font-color__secondary: #000000;
+  --font-color__header: #c0caf5;
+  --font-color__clear: #292e42;
+  --font-color__toggle: #eaf4fc;
+
+  --bg-color__main: #1a1b26;
+  --bg-color__primary: #000000;
+  --bg-color__secondary: #000000;
+  --bg-color__header: #171822;
+  --bg-color__header__selected: #1a1b26;
+
+  --border-color__main: #000000;
+  --border-color__primary: #000000;
+  --border-color__secondary: #000000;
+  --border-color__header: #000000;
+  --border-color__header__selected: #565f89;
+
+  --header-height: 40px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+
+  font-size: 18px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+
+  color: var(--font-color__main);
+  background: var(--bg-color__main);
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.noselect {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100vw;
+  height: var(--header-height);
+  z-index: 50;
+
+  color: var(--font-color__header);
+  background: var(--bg-color__header);
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 8px 16px;
+}
+
+.navbar > a {
+  color: var(--font-color__header);
+}
+
+.logo {
+  font-size: 1.2rem;
+  font-family: "Zen Kurenaido", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.navbar__menu {
+  display: flex;
+  gap: 50px;
+}
+
+.navbar__menu li {
+  list-style: none;
+}
+
+.navbar__link {
+  font-size: 1.2rem;
+  font-weight: 500;
+
+  color: var(--font-color__header);
+
+  /* Hover時に下線を引くアニメーション */
+  padding-bottom: 3px;
+  background-image: linear-gradient(#000, #000);
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  background-size: 0 1px;
+  transition: background-size 0.3s;
+}
+
+.navbar__link:hover {
+  background-position: bottom left;
+  background-size: 100% 1px;
+}
+
+/* ダークモード切替 */
+.theme-toggle__label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.theme-toggle__label span {
+  margin: 0 10px;
+  color: var(--font-color__toggle);
+}
+
+.theme-toggle__switch {
+  width: 50px;
+  height: 24px;
+  background-color: #eaf4fc;
+  border-radius: 12px;
+  position: relative;
+  transition: background-color 0.3s;
+}
+.theme-toggle__switch::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  border-radius: 50%;
+  top: 2px;
+  left: 2px;
+  transition: transform 0.3s;
+}
+input[type="checkbox"] {
+  display: none;
+}
+input[type="checkbox"]:checked + .theme-toggle__switch {
+  background-color: #fdb86d;
+}
+input[type="checkbox"]:checked + .theme-toggle__switch::before {
+  transform: translateX(26px);
+}
+
+/* 本文 */
+main {
+  width: 100%;
+  margin: var(--header-height) auto;
+
+  overflow-y: auto;
+  scrollbar-color: var(--font-color__clear) var(--bg-color__main);
+}
+
+.container {
+  height: 100%;
+}
+
+section {
+  margin: 32px 8px;
+
+  display: flex;
+  flex-direction: row;
+}
+
+.section__box {
+  width: 100%;
+  height: 100%;
+}
+
+/* フッター */
+footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  width: 100vw;
+  height: var(--header-height);
+  z-index: 50;
+
+  color: var(--font-color__header);
+  background: var(--bg-color__header);
+}
+
+.copyright {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
